@@ -2,7 +2,7 @@ from aqt.qt import *
 from aqt import mw
 from aqt.utils import showInfo, askUser, showWarning
 from .lingq import authenticate, get_active_languages, get_cards
-from PyQt6.QtWidgets import QScreen
+from PySide6.QtGui import QScreen
 from .model import get_lingq_model
 from .config import (
     get_selected_languages,
@@ -24,7 +24,7 @@ def lingq_addon_main(is_logged_in):
 
     # center dialog
     qtRect = dialog.frameGeometry()
-    cp = QDesktopWidget().availableGeometry().center()
+    cp = QScreen().availableGeometry().center()
     qtRect.moveCenter(cp)
     dialog.move(qtRect.topLeft())
 
