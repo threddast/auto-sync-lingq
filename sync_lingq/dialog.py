@@ -2,7 +2,7 @@ from aqt.qt import *
 from aqt import mw
 from aqt.utils import showInfo, askUser, showWarning
 from .lingq import authenticate, get_active_languages, get_cards
-from PyQt6.QtWidgets import QDesktopWidget
+from PyQt6.QtWidgets import QScreen
 from .model import get_lingq_model
 from .config import (
     get_selected_languages,
